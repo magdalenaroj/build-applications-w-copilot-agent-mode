@@ -27,6 +27,8 @@ router.register(r'leaderboard', views.LeaderboardViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('', views.api_root, name='api-root'),
+    path('api/', include(router.urls)),  # Existing API endpoints
+    # All API endpoints will be available at /api/[component]/
+    path('api/', include('octofit_tracker.urls_api')),
+    path('', views.api_root, name='api-root'),  # Returns endpoints using CODESPACE_NAME env variable
 ]

@@ -31,5 +31,5 @@ def api_root(request, format=None):
         'teams': '/api/teams/',
         'activities': '/api/activities/',
         'workouts': '/api/workouts/',
-        'leaderboard': '/api/leaderboard/',
+        'leaderboard': '/api/leaderboard/ ',
     })

@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-lfmfs=tv^q%#z3r+6=9kawa(#ry%%9vxcnaen8mjwhh&+n6cv2
 DEBUG = True
 
 import os
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 if os.environ.get('CODESPACE_NAME'):
-    ALLOWED_HOSTS.append(f"{os.environ.get('CODESPACE_NAME')}-8000.app.github.dev")
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    ALLOWED_HOSTS.append(f"{codespace_name}-8000.app.github.dev")
 
 
 # Application definition
